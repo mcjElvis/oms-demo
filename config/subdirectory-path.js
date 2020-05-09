@@ -1,2 +1,4 @@
+const time = new Date().getTime()
 const serveName = 'oms-demo'
-module.exports = serveName
+const subdir = serveName + '/' + time
+module.exports = subdir
