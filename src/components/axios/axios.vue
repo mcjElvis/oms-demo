@@ -9,7 +9,8 @@
 export default {
     data () {
         return {
-            result: ''
+            result: '',
+            booleans: true
         }
     },
     methods: {

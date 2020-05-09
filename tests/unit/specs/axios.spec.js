@@ -12,9 +12,11 @@ describe('模拟axios', () => {
             },
             localVue
         })
-        const result = warpper.vm.handleSubmit()
+        const booleans = warpper.vm.booleans
         return Vue.nextTick(function () {
-            expect(result).toEqual({ status: 200 })
+            expect(booleans).toBe(true)
+            let url = 'http://yapi.youximao.cn/mock/509/web/common/initMenu'
+            expect(Axios.post).toBeCalledWith(url)
         })
     })
 })

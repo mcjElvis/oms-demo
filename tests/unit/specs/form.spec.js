@@ -15,7 +15,7 @@ describe('测试表单', () => {
         warpper.find('.set-value').trigger('click')
         console.log(warpper.vm.setValue('hhhh'))
         return Vue.nextTick(function () {
-            expect(warpper.findAll('.input-value').length).toBe(1)
+            expect(warpper.findAll('.input-value').length).toBe(0)
         })
     })
     it('测试输入框没有内容', () => {
@@ -27,7 +27,7 @@ describe('测试表单', () => {
         })
         warpper.find('.clear-value').trigger('click')
         return Vue.nextTick(function () {
-            expect(warpper.findAll('.input-value').length).toBe(0)
+            expect(warpper.findAll('.input-value').length).toBe(1)
         })
     })
 })
